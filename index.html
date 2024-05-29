@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Weather App</title>
+</head>
+<body>
+    
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="assets/flower.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="stuff">
+        <div class="card">
+            <div class="search">
+                <h1 class="city">Enter The City</h1>
+                <div id="form">
+                    <input type="text" id="query" name="q"
+                     placeholder="Search...">
+                    <button><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+                        <path fill="#616161" d="M34.6 28.1H38.6V45.1H34.6z" transform="rotate(-45.001 36.586 36.587)"></path><path fill="#616161" d="M20 4A16 16 0 1 0 20 36A16 16 0 1 0 20 4Z"></path><path fill="#37474F" d="M36.2 32.1H40.2V44.400000000000006H36.2z" transform="rotate(-45.001 38.24 38.24)"></path><path fill="#64B5F6" d="M20 7A13 13 0 1 0 20 33A13 13 0 1 0 20 7Z"></path><path fill="#BBDEFB" d="M26.9,14.2c-1.7-2-4.2-3.2-6.9-3.2s-5.2,1.2-6.9,3.2c-0.4,0.4-0.3,1.1,0.1,1.4c0.4,0.4,1.1,0.3,1.4-0.1C16,13.9,17.9,13,20,13s4,0.9,5.4,2.5c0.2,0.2,0.5,0.4,0.8,0.4c0.2,0,0.5-0.1,0.6-0.2C27.2,15.3,27.2,14.6,26.9,14.2z"></path>
+                        </svg></button>
+                    </div>
+            </div>
+            <div class="image">
+                <img src="assets/cloudy.png" />
+            </div>
+            <div class="weather">
+                ---
+            </div>
+            <div class="place hide">
+                Lucknow, India
+            </div>
+            <div class="temp hide">
+                <img src="assets/hot.png" /> --- | <img src="assets/wind_speed.png"/ > ---
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
