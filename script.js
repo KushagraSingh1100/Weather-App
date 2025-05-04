@@ -5,14 +5,23 @@ let placeText = document.querySelector(".place");
 let tempText = document.querySelector(".temp");
 let textChange = document.querySelector(".city");
 let background = document.querySelector(".video-container video");
+let inputField = document.getElementById("query");
 
 let cityName;
 let type;
 let temp;
 let wind;
 
+inputField.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    cityName = inputField.value;
+    if (cityName === "") return;
+    getWeather(cityName);
+  }
+});
+
 searchbtn.addEventListener("click", () => {
-  cityName = document.querySelector(".search input").value;
+  cityName = inputField.value;
   if (cityName === "") return;
   getWeather(cityName);
 });
@@ -169,11 +178,11 @@ async function getWeather(city) {
     case "Mist":
       console.log("mist");
       image.src = "assets/wind.png";
-      background.src = "assets/sunny.mp4";
+      background.src = "assets/sunny_mountain.mp4";
       break;
     default:
       console.log("default");
-      background.src = "assets/sunny.mp4";
+      background.src = "assets/sunny_mountain.mp4";
   }
   textChange.innerText = "Weather";
   placeText.innerText = `${data.location.name}, ${data.location.country}`;
